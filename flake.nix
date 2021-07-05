@@ -1,5 +1,5 @@
 {
-  description = "A simple filehost written in rust";
+  description = "Main flake of my junk";
 
   inputs = {
     nixpkgs.url = github:nixos/nixpkgs/nixos-unstable;

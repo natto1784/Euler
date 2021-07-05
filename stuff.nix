@@ -1,20 +1,18 @@
 super:
 {
   tools = with super.pkgs; {
-    c = gcc;
+    c = [ gcc gnumake ];
     rust = rust-bin.nightly.latest.default;
-    js = nodejs;
-    ts = nodejs;
+    ts = [ nodePackages.typescript nodejs ];
     clisp = clisp;
-    python = [python3 python2];
-    haskell = ghc;
+    python = [ python3 python2 ];
+    haskell = [ ghc cabal-install ] ;
   };
   lsp = with super.pkgs; {
-    c = clang;
+    c = ccls;
     rust = rust-analyzer;
-    js = nodePackages.typescript-language-server;
     ts = nodePackages.typescript-language-server;
-    python = python3Packages.jedi;
+    python = python3Packages.python-language-server;
     haskell = haskell-language-server;
   };
 }
