@@ -1,7 +1,7 @@
 super:
 {
   tools = with super.pkgs; {
-    c = [ gcc gnumake ];
+    c = [ gcc gnumake gdb lldb ];
     rust = rust-bin.nightly.latest.default;
     ts = [ nodePackages.typescript nodejs ];
     clisp = clisp;

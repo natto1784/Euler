@@ -4,3 +4,4 @@ dist-newstyle/
 dist/
 result-doc
 c/bin
+.ccls-cache/

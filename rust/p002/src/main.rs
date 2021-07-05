@@ -1,8 +1,8 @@
-fn solve() -> u64 {
-    let (mut x, mut y): (u64, u64) = (1, 2);
-    let mut ans: u64 = 0;
-    while x <= 4e6 as u64 {
-        if y%2 == 0u64 {
+fn solve() -> u32 {
+    let (mut x, mut y): (u32, u32) = (1, 2);
+    let mut ans: u32 = 0;
+    while x <= 4e6 as u32 {
+        if y%2 == 0u32 {
             ans += y;
         }
         y += x;
