@@ -27,7 +27,7 @@
       nativeBuildInputs = with pkgs; [
         rust-bin.nightly.latest.default
       ];
-      cargoSha256 = "sha256-CkCmWqr0S36xh1VErWgelXHEj4eGI7y6p4l1zcHfC5g=";
+      cargoSha256 = "sha256-oYtoTxAfV+bmnv8fASI3cyf3mRw+aqAScXH3AS2WtpU=";
     };
     pad = x: (strings.fixedWidthString 3 "0" (builtins.toString x));
   in
@@ -36,9 +36,9 @@
       buildInputs = (if lists.isList tools then tools else [tools]) ++ [lsp];
     };
     defaultPackage = pkgs.rustPlatform.buildRustPackage package;
-    packages = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 7)) (x: "p${pad x}")) 
+    packages = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 8)) (x: "p${pad x}")) 
     (name: pkgs.rustPlatform.buildRustPackage (package // {buildAndTestSubdir = "./${name}";}));
-    apps = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 7)) (x: "p${pad x}")) (name: {
+    apps = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 8)) (x: "p${pad x}")) (name: {
       type = "app";
       program = "${self.packages.${system}.${name}}/bin/${name}";
     });

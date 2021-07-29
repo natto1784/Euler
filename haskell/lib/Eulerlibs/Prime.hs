@@ -1,6 +1,6 @@
 module Eulerlibs.Prime where
 
-import Data.Sequence (Seq, empty, (<|))
+import Data.Sequence (Seq, empty, index, (<|))
 import qualified Data.Set as S
 
 -- https://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf || page 7
@@ -28,3 +28,9 @@ primes n = 2 <| sieve [3, 5 .. n]
 
     insert :: Integral a => a -> [a] -> S.Set [a] -> S.Set [a]
     insert p xs = S.insert (map (* p) xs)
+
+getNthPrime :: Integral a => Int -> a
+getNthPrime n = index (primes $ ceiling $ x * log (x * log x)) (n - 1)
+  where
+    x :: Num a => a
+    x = fromIntegral n

@@ -2,7 +2,7 @@
 My entrance exams are here, adios
 
 # Euler Project(?)
-Made this new repo to just add all the random euler project shit that ill ever do (yeah deleted my old repo by the same name that had quite a few shitty code files). This time I'll use some different languages because I've nothing better to do (maybe it will help me practice languages that I'll never use :D)
+Made this new repo to just add all the random euler project shit that ill ever do (yeah deleted my old repo by the same name that had quite a few shitty code files). This time I'll use some different languages because I've nothing better to do (maybe it will help me practice languages that I'll never use :D). Also, I'll try to write the fastest code that I can, instead of using some libs that are slower (for eg haskell/p005).
 
 # Developer environment using nix (I don't know why I added this [I really don't])
 To use a nix shell with all the required tools and LSP servers for these languages, run this inside this directory

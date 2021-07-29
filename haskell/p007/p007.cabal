@@ -1,0 +1,12 @@
+cabal-version:      2.4
+name:               p007
+version:            0.1.0.0
+author:             natto1784
+maintainer:         singh.amneesh1784@gmail.com
+executable p007
+    main-is:          Main.hs
+    build-depends:    
+          base ^>=4.14.1.0
+        , eulerlibs
+    hs-source-dirs:   .
+    default-language: Haskell2010

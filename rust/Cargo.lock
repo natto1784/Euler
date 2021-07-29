@@ -32,3 +32,10 @@ dependencies = [
 [[package]]
 name = "p006"
 version = "0.1.0"
+
+[[package]]
+name = "p007"
+version = "0.1.0"
+dependencies = [
+ "eulerlibs",
+]

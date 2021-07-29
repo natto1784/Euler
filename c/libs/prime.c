@@ -8,7 +8,6 @@ struct SieveAndPrimes main_helper(unsigned int N) {
   int8_t *sieve = (int8_t *)calloc(sizeof(int8_t), N + 1);
   vec primes;
   new_vec(&primes);
-  sieve[0] = 1, sieve[1] = 1;
   for (unsigned int x = 2; x <= sqrt(N); x++) {
     if (!sieve[x]) {
       for (unsigned int y = x * x; y <= N; y += x)
@@ -40,4 +39,9 @@ vec get_primes_upto(unsigned int N) {
   struct SieveAndPrimes a = get_sieve_and_primes(N);
   free(a.sieve);
   return a.primes;
+}
+
+unsigned int get_nth_prime(unsigned int n) {
+  double ub = n * log(n * log(n));
+  return get_primes_upto(ceil(ub)).items[n - 1];
 }
