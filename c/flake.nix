@@ -36,7 +36,7 @@
         cp bin/* $out/bin
       '';
     };
-    packages = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 8)) (x: "p${pad x}")) 
+    packages = attrs.genAttrs (lists.forEach (lists.tail (lists.genList (x: x) 11)) (x: "p${pad x}")) 
     (name: pkgs.stdenv.mkDerivation {
       pname = name;
       version = "0.1.0";

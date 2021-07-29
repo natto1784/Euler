@@ -1,9 +1,9 @@
 cabal-version:      2.4
-name:               p006
+name:               p009
 version:            0.1.0.0
 author:             natto1784
 maintainer:         singh.amneesh1784@gmail.com
-executable p006
+executable p009
     main-is:          Main.hs
     build-depends:    base ^>=4.14.1.0
     hs-source-dirs:   .
