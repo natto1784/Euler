@@ -2,9 +2,9 @@ SUBDIRS := $(wildcard p*)
 
 all: $(SUBDIRS)
 $(SUBDIRS):
-		mkdir -p bin
-		$(MAKE) -C $@
-		mv $@/$@ ./bin
+	mkdir -p bin
+	$(MAKE) -C $@
+	mv $@/$@ ./bin
 
 clean:
 	rm -r ./bin

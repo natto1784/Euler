@@ -4,7 +4,7 @@
 int solve(int x) {
   if (x == 1)
     return 2;
-  vec primes = get_primes_upto(1e6);
+  vec primes = get_primes_upto(1e3);
   int ans = 1;
   for (int g = 0; primes.items[g] <= x; g++) {
     int h = primes.items[g];

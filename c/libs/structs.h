@@ -1,8 +1,7 @@
 #ifndef STRUCTS_H
 #define STRUCTS_H
 
-// A weak implementation of a C++ vector with functions that will only every be
-// used
+// A weak implementation of a C++ vector
 struct Vector {
   int *items;
   unsigned int capacity;
